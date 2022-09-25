@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.teste.Controle.DTO.UsuarioDto;
 import com.teste.Controle.entities.Usuario;
 import com.teste.Controle.services.UsuarioService;
 
@@ -24,7 +25,7 @@ public class UsuarioController {
 	private UsuarioService usuarioService;
 
 	@GetMapping
-	private ResponseEntity<List<Usuario>> listarUsuarios() {
+	public ResponseEntity<List<Usuario>> listarUsuarios() {
 		List<Usuario> lista = usuarioService.buscarTodos();
 		return ResponseEntity.ok().body(lista);
 	}
@@ -36,8 +37,10 @@ public class UsuarioController {
 	}
 
 	@PostMapping
-	public ResponseEntity<Usuario> novoUsuario(@RequestBody Usuario usuario) {
-		Usuario novo = usuarioService.novoUsuario(usuario);
+	public ResponseEntity<Usuario> novoUsuario(@RequestBody UsuarioDto usuario) {
+		
+		Usuario novo = usuarioService.fromDto(usuario);
+		novo = usuarioService.novoUsuario(novo);
 		return new ResponseEntity<>(novo, HttpStatus.CREATED);
 	}
 

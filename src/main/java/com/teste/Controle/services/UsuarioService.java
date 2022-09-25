@@ -4,10 +4,13 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import com.teste.Controle.DTO.UsuarioDto;
 import com.teste.Controle.entities.Usuario;
 import com.teste.Controle.repositories.UsuarioRepository;
 
+@Service
 public class UsuarioService {
 	
 	@Autowired
@@ -42,6 +45,10 @@ public class UsuarioService {
 	public void deletarUsuario(Long id) {
 		buscarPorId(id);
 		usuario.deleteById(id);
+	}
+	
+	public Usuario fromDto(UsuarioDto objDto) {
+		return new Usuario(objDto.getId(), objDto.getNome(), objDto.getCpf(), objDto.getAcesso(), objDto.getSenha());
 	}
 
 }
