@@ -1,5 +1,9 @@
 <h1># Teste-ITAVENTURES</h1>
 
+<h2> MER </h2>
+
+<img src="https://user-images.githubusercontent.com/81486915/192194768-6d111876-6b50-4dda-8ee4-342dee2e72a1.png">
+
 
 <h2>Passo a passo</h2>
 
@@ -10,6 +14,8 @@
 3 - Rodar mvn spring-boot:run para subir a aplicação
 
 4 - A aplicação estará disponível na porta 8080
+
+5 - As tabelas são criadas automaticamente ao rodar a aplicação.
 
 <h2> *IMPORTANTE* </h2>
 
