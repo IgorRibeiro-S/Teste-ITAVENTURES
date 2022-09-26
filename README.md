@@ -65,7 +65,7 @@ Para teste USER - login: user
                    
 <h1> *URLS DISPONÍVEIS PARA ADMIN* </h1>
 
-<h3>* /presenca/data?start={DATA DE INICIO}&END={DATA FIM}</h3>
+<h3>* /presenca/data?start={DATA DE INICIO}&end={DATA FIM}</h3>
 Esta URL filtra as datas selecionadas.
 
 <img src="https://user-images.githubusercontent.com/81486915/192188582-ca40c741-4b11-4838-b4dc-36d5ab0aabc6.png" width="550" height="290">
