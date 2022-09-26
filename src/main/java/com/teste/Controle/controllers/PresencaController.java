@@ -1,5 +1,6 @@
 package com.teste.Controle.controllers;
 
+import java.sql.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.teste.Controle.DTO.PresencaDto;
@@ -33,6 +35,12 @@ public class PresencaController {
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<Presenca> buscarPeloId(@PathVariable("id") Long id) {
 		Presenca presenca = presencaService.buscarPorId(id);
+		return ResponseEntity.ok().body(presenca);
+	}
+
+	@GetMapping(value = "/data")
+	public ResponseEntity<List<Presenca>> buscarPorData(@RequestParam Date start, @RequestParam Date end){
+		List<Presenca> presenca = presencaService.buscarPorData(start, end);
 		return ResponseEntity.ok().body(presenca);
 	}
 

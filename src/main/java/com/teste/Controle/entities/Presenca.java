@@ -1,17 +1,16 @@
 package com.teste.Controle.entities;
 
 import java.io.Serializable;
-import java.time.Instant;
+import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -32,15 +31,16 @@ public class Presenca implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "America/Sao_Paulo")
-	private Instant presenca;
+	@Temporal(TemporalType.DATE)
+	@Column(name = "created_at")
+	private Date presenca;
 
 	@OneToOne
 	private Usuario user;
 
-	public Presenca(Long id, Instant presenca, Usuario usuario) {
+	public Presenca(Long id, Date presenca, Usuario usuario) {
 		this.id = id;
-		this.presenca = Instant.now();
+		this.presenca = new Date(System.currentTimeMillis());
 		this.user = usuario;
 	}
 	

@@ -1,5 +1,6 @@
 package com.teste.Controle.services;
 
+import java.sql.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -51,4 +52,8 @@ public class PresencaService {
 		return new Presenca(obj.getId(), obj.getPresenca(), obj.getUser());
 	}
 
+
+	public List<Presenca> buscarPorData(Date start, Date end){
+		return presenca.findByPresencaBetween(start, end);
+	}
 }

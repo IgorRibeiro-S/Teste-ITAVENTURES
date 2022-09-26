@@ -17,7 +17,6 @@ public class UsuarioDto implements Serializable{
 	private Long id;
 	private String nome;
 	private String cpf;
-	private Integer Acesso;
 	private String senha;
 	
 	public UsuarioDto() {
@@ -28,7 +27,6 @@ public class UsuarioDto implements Serializable{
 		this.id = obj.getId();
 		this.nome = obj.getNome();
 		this.cpf = obj.getCpf();
-		this.Acesso = obj.getAcesso();
 		this.senha = obj.getSenha();
 	}
 }

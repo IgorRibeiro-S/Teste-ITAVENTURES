@@ -1,7 +1,7 @@
 package com.teste.Controle.DTO;
 
 import java.io.Serializable;
-import java.time.Instant;
+import java.util.Date;
 
 import com.teste.Controle.entities.Presenca;
 import com.teste.Controle.entities.Usuario;
@@ -17,7 +17,7 @@ public class PresencaDto implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	private Long id;
-	private Instant presenca;
+	private Date presenca;
 	private Usuario user;
 	
 	public PresencaDto() {
