@@ -1,5 +1,37 @@
 <h1># Teste-ITAVENTURES</h1>
 
+
+<h3 align="center">Problema</h3>
+<p align="justify">
+Desenvolver uma aplicação para controle de presenças, onde são necessários níveis de acesso para determinadas funções. o Administrador deve poder filtrar as datas das presenças bem como, excluir, editar, inserir e visualizar.
+</p>
+
+<h3 align="center">Solução</h3>
+<p align="justify">
+Foi desenvolvido uma aplicação em REST API utiizando segurança e fácil utilização. Utilizei tecnologias atuais no mercado, sendo de fácil implementação e manutenção.
+</p>
+
+## Tecnologias Utilizadas
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white"/>
+  <img src="https://img.shields.io/badge/maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white"/>
+  
+</p>
+
+## Requisitos
+
+### 📌 Requisitos Funcionais
+
+- Cadastros de usuários
+- Cadastros de presenças (DATA)
+- Usuários devem ter perfis diferentes (administrador, colaborador)
+- Administrador deve interagir com as datas selecionadas
+- Administrador deve interagir com as presenças, com: visualização, exclusão, adição, edição.
+
+
 <h2> MER </h2>
 
 <img src="https://user-images.githubusercontent.com/81486915/192194768-6d111876-6b50-4dda-8ee4-342dee2e72a1.png">
