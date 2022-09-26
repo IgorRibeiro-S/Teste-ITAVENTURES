@@ -8,7 +8,7 @@ Desenvolver uma aplicação para controle de presenças, onde são necessários 
 
 <h3 align="center">Solução</h3>
 <p align="justify">
-Foi desenvolvido uma aplicação em REST API utiizando segurança e fácil utilização. Utilizei tecnologias atuais no mercado, sendo de fácil implementação e manutenção.
+Foi desenvolvido uma aplicação em REST API utiizando segurança e código limpo, seguindo a convenção da linguagem. Utilizei tecnologias atuais do mercado, sendo de fácil implementação e manutenção.
 </p>
 
 ## Tecnologias Utilizadas
