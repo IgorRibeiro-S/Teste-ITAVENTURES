@@ -8,14 +8,11 @@ import com.teste.Controle.entities.Presenca;
 import com.teste.Controle.entities.Roles;
 import com.teste.Controle.entities.Usuario;
 import com.teste.Controle.repositories.RoleRepository;
-import com.teste.Controle.repositories.UsuarioRepository;
 import com.teste.Controle.services.UsuarioService;
 
 @Configuration
 public class TestConfig implements CommandLineRunner {
 
-	@Autowired
-	private UsuarioRepository usuarioRepository;
 	
 	@Autowired
 	private UsuarioService userService;
@@ -35,6 +32,9 @@ public class TestConfig implements CommandLineRunner {
 		Roles rol2 = new Roles(null, "USER");
 		
 		
+		
+		
+		
 		userService.novoUsuario(novo);
 		userService.novoUsuario(novo2);
 		novo.setPresenca(pres);
@@ -43,7 +43,7 @@ public class TestConfig implements CommandLineRunner {
 		userService.novoUsuario(novo2);
 		roleRepository.save(rol1);
 		roleRepository.save(rol2);
-		
+
 	}
 
 }
