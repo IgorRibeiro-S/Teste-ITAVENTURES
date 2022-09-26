@@ -31,7 +31,7 @@ Para teste USER - login: user
                    senha: password
                    
                    
-<h1> *URLS DISPONÌVEIS PARA ADMIN* </h1>
+<h1> *URLS DISPONÍVEIS PARA ADMIN* </h1>
 
 <h3>* /presenca/data?start={DATA DE INICIO}&END={DATA FIM}</h3>
 Esta URL filtra as datas selecionadas.
