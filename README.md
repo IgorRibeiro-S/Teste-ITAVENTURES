@@ -16,6 +16,15 @@
 Alterar o application.properties conforme o seu banco.
 Utilizar a ferramenta POSTMAN para requisições.
 
+Para teste ADMIN - login: admin
+                   senha: password
+
+
+
+Para teste USER - login: user
+                   senha: password
+                   
+                   
 <h1> *URLS DISPONÌVEIS PARA ADMIN* </h1>
 
 <h3>* /presenca/data?start={DATA DE INICIO}&END={DATA FIM}</h3>
